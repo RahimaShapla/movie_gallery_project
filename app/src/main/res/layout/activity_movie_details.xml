@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar1"
+                layout="@layout/app_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_big_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_110"
+                android:background="@color/teal"
+                android:elevation="@dimen/elevation_2"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/padding_16"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_body_26"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar1"
+                tool:text="Chappie" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_movie"
+                android:layout_width="@dimen/width_150"
+                android:layout_height="@dimen/height_250"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_big_title"
+                app:srcCompat="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_15"
+                android:textSize="@dimen/text_body_24"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_view_movie"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_big_title"
+                tool:text="2015" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textSize="@dimen/text_body_22"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/image_view_movie"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_year"
+                tool:text="120 min" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_body_16"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_view_movie"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_min"
+                tool:text="8.1/10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_10"
+                android:alpha="0.6"
+                android:background="@color/teal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/height_5"
+                android:text="   MARK AS \n FAVOURITE"
+                android:textSize="@dimen/text_body_16"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_view_movie"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_rate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_16"
+                android:textSize="@dimen/text_body_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_movie"
+                tool:text="jghdfghdfkjghdfghdkfjghdkfghdf
+            kjghdfkjghdkfjghdfkghdfkghdghfghdfkgdfgdkfghdkfjg" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_1"
+                android:background="@color/grey"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingEnd="@dimen/padding_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_description" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_trailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/margin_16"
+                android:text="@string/trailers"
+                android:textSize="@dimen/text_body_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_description" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_trailer" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
