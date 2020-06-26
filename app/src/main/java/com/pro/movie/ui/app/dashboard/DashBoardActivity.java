@@ -66,7 +66,7 @@ public class DashBoardActivity extends BaseActivity<DashBoardMvpView, DashBoardP
 
     @Override
     public void onSuccess(List<MovieModel> modelList) {
-        if(!modelList.isEmpty()){
+        if (!modelList.isEmpty()) {
             mAdapter.addItems(modelList);
             mAdapter.notifyDataSetChanged();
         }
@@ -76,4 +76,19 @@ public class DashBoardActivity extends BaseActivity<DashBoardMvpView, DashBoardP
     public void onError(String errorMessage) {
         ToastUtils.INSTANCE.error(errorMessage);
     }
+
+    //this method will be used  for pagination
+
+   /* private void loadMore() {
+        mBinding.recyclerViewMovie.getViewTreeObserver().
+                addOnScrollChangedListener(() ->
+                {
+                    if (mBinding.recyclerViewMovie.getChildAt(0).getBottom()
+                            == (mBinding.recyclerViewMovie.getHeight() + mBinding.recyclerViewMovie.getScrollY())) {
+                        if (hasMore) {
+                            presenter.getMovieList(this, pageNumber);
+                        }
+                    }
+                });
+    }*/
 }
